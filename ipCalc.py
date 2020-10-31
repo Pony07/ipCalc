@@ -16,7 +16,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     def test(self):
         self.subnet_result.insertPlainText('192.168.1.0/24\n')
-
+        # 解决 macos 文本框不刷新问题
+        self.repaint()
 
 
 if __name__ == '__main__':
